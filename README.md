@@ -1,9 +1,9 @@
 # VIN Validador Scania Hack 2024
-* PRODUCT team (Forsberg Christer, Oldenkamp Emiel)
-* KOTLIN team (Vaddi Shanmukha, Oldenkamp Emiel, Caccin Giulio)
-* Typescript team (Dhanore Yash, Palmér Samuel, Caccin Giulio)
+* PRODUCT team (Forsberg Christer, Oldenkamp Emiel) 
+* KOTLIN/JAVA team (Vaddi Shanmukha, Oldenkamp Emiel, Caccin Giulio) - [Kotlin Vin Validator](https://github.com/vinner-it/vinner-it-kotlin)
+* Typescript team (Dhanore Yash, Palmér Samuel, Caccin Giulio) - [Typescript Vin Validator](https://github.com/vinner-it/vinner-it-typescript)
 * .NET team (Selvad Niclas, Vañó Igual Ximo, Borro Diana) - [.NET Vin Validator](https://github.com/vinner-it/vinner-it-dotnet)
-* C++ (Emami Mohsen, Caccin Giulio)
+* C++ (Emami Mohsen, Caccin Giulio) - [C++ Vin Validator](https://github.com/vinner-it/vinner-it-cpp)
 
 # VIN Standard Summary
 
