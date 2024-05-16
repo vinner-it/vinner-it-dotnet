@@ -28,6 +28,10 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
+      
+    - name: "Get version"
+      id: version
+      uses: battila7/get-version-action@v2
 
     - name: "Pack project"
       run: dotnet pack ${{ env.PROJECT_PATH }} --no-restore --no-build --configuration Release -p:PackageVersion=${{ steps.version.outputs.version-without-v }} --output ${{ env.PACKAGE_OUTPUT_DIRECTORY }}
