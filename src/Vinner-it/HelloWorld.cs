@@ -1,9 +1,19 @@
-﻿namespace Vinner_it;
+﻿using System.Text.RegularExpressions;
 
-public class HelloWorld
+namespace Vinner_it;
+
+public class VinBuilder
 {
-    public static void Print()
+    public bool FastVin(string? vin)
     {
-        Console.WriteLine("Hello world");
+        if (vin is null) return false;
+        
+        var vinRegex = "^[A-HJ-NPR-Z0-9]{17}$";
+        
+        return Regex.Match(vin, vinRegex).Success;
     }
+}
+
+public class ValidVin
+{
 }
