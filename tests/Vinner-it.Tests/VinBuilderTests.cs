@@ -7,9 +7,9 @@ public class VinBuilderTests
     [Fact]
     public void Fast_VIN_Should_Return_True_If_Valid()
     {
-        var tryResult = VinBuilder.TryParseVin("KNDPB3A21B7082471", out var vin);
+        var result = VinBuilder.TryParseVin("KNDPB3A21B7082471", out var vin);
         
-        Assert.True(tryResult);
+        Assert.True(result);
         Assert.NotNull(vin);
         Assert.NotEmpty(vin.Vin);
     }
@@ -18,9 +18,9 @@ public class VinBuilderTests
     public void Fast_VIN_Should_Return_False_If_Invalid()
     {
         
-        var tryCreat = VinBuilder.TryParseVin("KB3A21B7082471", out var vin);
+        var result = VinBuilder.TryParseVin("KB3A21B7082471", out var vin);
 
-        Assert.False(tryCreat);
+        Assert.False(result);
         Assert.Null(vin);
     }
     
@@ -33,5 +33,24 @@ public class VinBuilderTests
         Assert.False(tryCreate);
         Assert.Null(vin);
     }
-}
 
+    [Fact]
+    public void Validate_WithRegex_ShouldReturnFalse()
+    {
+        var builder = new VinBuilder().ValidateRegex().Build();
+
+        var result = builder.Validate("test");
+        
+        Assert.False(result);
+    }
+
+    [Fact]
+    public void Validate_WithValidRegexVin_ShouldReturnTrue()
+    {
+        var builder = new VinBuilder().ValidateRegex().Build();
+
+        var result = builder.Validate("KNDPB3A21B7082471");
+        
+        Assert.True(result);
+    }
+}
