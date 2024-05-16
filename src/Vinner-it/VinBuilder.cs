@@ -21,11 +21,11 @@ public class VinBuilder
         }
     }
 
-    public static bool TryParseVin(string? input, [NotNullWhen(true)] out ValidVin? vin)
+    public static bool TryParseVin(string? input, [NotNullWhen(true)] out FastVin? vin)
     {
         if (FastVin(input))
         {
-            vin = new ValidVin(input);
+            vin = Vinner_it.FastVin.Create(input);
             return true;
         }
 
@@ -34,15 +34,18 @@ public class VinBuilder
     }
 }
 
-public record ValidVin
+public record FastVin
 {
-    public string Vin { get; init; }
+    public string Vin { get; }
 
-    internal ValidVin(string vin)
+    private FastVin(string vin)
+    {
+        Vin = vin;
+    }
+    internal static FastVin Create(string vin)
     {
         // TODO: how do we make sure that serializers are not able to highjack validation-flow?
         if (!VinBuilder.FastVin(vin)) throw new ArgumentException($"Input {nameof(vin)} is not valid");
-        Vin = vin;
+        return new FastVin(vin);
     }
-    
 }
