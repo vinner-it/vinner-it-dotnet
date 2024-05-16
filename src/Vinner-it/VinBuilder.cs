@@ -41,7 +41,8 @@ public record ValidVin
     internal ValidVin(string vin)
     {
         // TODO: how do we make sure that serializers are not able to highjack validation-flow?
-        if (!VinBuilder.FastVin(vin)) throw new ArgumentException("Input {0} is not a valid vin", nameof(vin));
+        if (!VinBuilder.FastVin(vin)) throw new ArgumentException($"Input {nameof(vin)} is not valid");
         Vin = vin;
     }
+    
 }
