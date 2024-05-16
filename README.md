@@ -38,6 +38,42 @@ The following documents are indispensable for the application of the ISO 3779:20
 - ISO 4030: Road vehicles — Vehicle identification number (VIN) — Location and attachment
 
 ## Examples
+
+### USA
+- **VIN Example:** 1HGCM82633A123456
+  - **WMI:** 1HG (Honda - USA)
+  - **VDS:** CM8263 (Model details, body type, engine type)
+  - **VIS:** 3A123456 (Model year: 2003, Plant: A, Sequential number: 123456)
+
+### Europe
+- **VIN Example:** WDBFA76F0VF123456
+  - **WMI:** WDB (Daimler AG - Germany)
+  - **VDS:** FA76F0 (Model details, body type, engine type)
+  - **VIS:** VF123456 (Model year: 1997, Plant: F, Sequential number: 123456)
+
+### Asia
+- **VIN Example:** JT3VN39W1W8012345
+  - **WMI:** JT3 (Toyota - Japan)
+  - **VDS:** VN39W1 (Model details, body type, engine type)
+  - **VIS:** W8012345 (Model year: 1998, Plant: 8, Sequential number: 012345)
+
+### Explanation of Components
+1. **WMI (World Manufacturer Identifier):**
+   - **USA:** Typically starts with 1, 4, or 5. Example: 1HG (Honda USA)
+   - **Europe:** Typically starts with letters assigned to European countries. Example: WDB (Daimler AG - Germany)
+   - **Asia:** Typically starts with J for Japan or other letters for other Asian countries. Example: JT3 (Toyota - Japan)
+
+2. **VDS (Vehicle Descriptor Section):**
+   - A 6-character section describing the vehicle model, body type, engine type, and other attributes. The coding is determined by the manufacturer.
+
+3. **VIS (Vehicle Indicator Section):**
+   - An 8-character section. The last four characters are always numerical. It may include the model year and plant code as the first two characters, followed by a unique sequential number.
+
+### Additional Notes
+- **Characters Used:** Only the following characters are used in VINs: 1 2 3 4 5 6 7 8 9 0 A B C D E F G H J K L M N P R S T U V W X Y Z. The letters I, O, and Q are omitted to avoid confusion with numbers 1 and 0.
+- **Year Codes:** Each year is represented by a specific character in the VIS. For example, 'A' for 2010, 'B' for 2011, and so on.
+- **Manufacturing Plant Codes:** Each manufacturer assigns specific codes for their various manufacturing plants.
+
 The standard provides several examples of VIN formats to illustrate its application.
 
 For more detailed information, refer to the full ISO 3779:2009 document. This summary serves as an overview and guide for understanding and implementing the VIN standard in vehicle manufacturing and identification processes.
