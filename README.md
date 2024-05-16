@@ -2,7 +2,7 @@
 * PRODUCT team (Forsberg Christer, Oldenkamp Emiel)
 * KOTLIN team (Vaddi Shanmukha, Oldenkamp Emiel, Caccin Giulio)
 * Typescript team (Dhanore Yash, Palmér Samuel, Caccin Giulio)
-* .NET team (Selvad Niclas, Vañó Igual Ximo, Borro Diana)
+* .NET team (Selvad Niclas, Vañó Igual Ximo, Borro Diana) - [.NET Vin Validator](https://github.com/vinner-it/vinner-it-dotnet)
 * C++ (Emami Mohsen, Caccin Giulio)
 
 # VIN Standard Summary
