@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vinner-it", "src\Vinner-it\Vinner-it.csproj", "{04775780-4353-473C-BD2E-C274F273D2D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vinner-it.Tests", "Tests\Vinner-it.Tests\Vinner-it.Tests.csproj", "{85136EA0-5807-463B-B8AA-653A08D37A51}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vinner-it.Tests", "tests\Vinner-it.Tests\Vinner-it.Tests.csproj", "{85136EA0-5807-463B-B8AA-653A08D37A51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
